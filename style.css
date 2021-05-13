@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  --body-bg-img: url('./Assets/Background.png');
+  --title-bg-img: url('./Assets/iPhone-Mockup.png');
+
+  --primary-color: #013243;
+  --secondary-color: #7db5c9;
+  --black-color: #000;
+  --white-color: #fff;
+  --light-gray: #d9d9d9;
+
+  --radius-md: 14px;
+  --radius-sm: 8px;
+
+  --main-font: 'Roboto', sans-serif;
+
+  font-family: var(--main-font);
+  font-size: 10px;
+  color: var(--black-color);
+  background-image: var(--body-bg-img);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+h1 {
+  color: var(--white-color);
+  font-size: 2rem;
+  margin-top: 1.6rem;
+  margin-bottom: 0.8rem;
+}
+
+h3 {
+  color: var(--secondary-color);
+  font-size: 1.3rem;
+  margin-top: 0.8rem;
+}
+
+label {
+  font-size: 1rem;
+  margin-top: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+button {
+  display: block;
+  border-radius: var(--radius-sm);
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1.2rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.signup-section {
+  display: flex;
+  flex-direction: column;
+  height: 900px;
+  width: 336px;
+  border-radius: var(--radius-md);
+}
+
+.title-area {
+  height: 50%;
+  background: url('./Assets/iPhone-Mockup.png'), #013243;
+  background-size: 100%, 100%;
+  background-repeat: no-repeat, no-repeat;
+  background-position: 0 32px, 0 0;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  border: 1px solid var(--primary-color);
+  border-bottom: none;
+}
+
+.form-area {
+  height: 50%;
+  background-color: var(--white-color);
+  color: var(--black-color);
+  display: flex;
+  flex-direction: column;
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+  border: 1px solid var(--light-gray);
+}
+
+.form-area h1 {
+  color: inherit;
+  margin-top: 0;
+}
+
+.form-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+form {
+  margin: 1.6rem;
+}
+
+input {
+  border: 1px solid var(--light-gray);
+  padding: 1.2rem;
+  border-radius: var(--radius-sm);
+}
+
+@media only screen and (min-width: 768px) {
+  .signup-section {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    height: 900px;
+    width: 1147px;
+    border-radius: var(--radius-md);
+  }
+
+  .title-area {
+    width: 50%;
+    border-radius: var(--radius-md) 0 0 var(--radius-md);
+    background-size: 50%, 50%;
+    background-position: 50% 100%, 0 0;
+  }
+
+  .form-area {
+    width: 50%;
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  }
+}
